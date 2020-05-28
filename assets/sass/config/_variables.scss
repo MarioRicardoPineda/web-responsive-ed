@@ -1,0 +1,45 @@
+$max-width : 1024px;
+$header-height: 4rem;
+
+// colores
+$border-color: #ccc;
+$text-color: #53575A;
+$dark-color: #141618;
+
+
+// $breakpoint 
+
+$breakpoint :(
+    l : 960px
+);
+
+// PALETA DE COLORES
+:root{
+    --first-color: #007BDF;
+    --alert-color: #FF3C32;
+}
+
+// VARIABLES DE APILAMIENTO
+:root{
+    --z-back: -10;
+    --z-normal: 1;
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+}
+
+
+// VARIABLES DE TIPOGRAFIA
+:root{
+    --h1-font-size: 2rem;
+    --h2-font-size: 1.5rem;
+    --body-font-size: .9rem;
+    --small-font-size: .75rem;
+
+    @include from(l) {
+        --h1-font-size: 2.5rem;
+        --h2-font-size: 1.75rem;
+        --body-font-size: 1rem;
+        --small-font-size: .8rem;
+    }
+}

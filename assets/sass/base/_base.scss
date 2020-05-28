@@ -1,0 +1,31 @@
+html {
+    box-sizing: border-box;
+}
+
+*,*::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+body{
+    font-family: lato, sans-serif;
+    font-size: var(--body-font-size);
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+h1{
+    font-size: var(--h1-font-size);
+}
+
+h2{
+    font-size: var(--h2-font-size);
+}
+

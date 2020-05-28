@@ -1,0 +1,53 @@
+.l-container{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: $max-width;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.l-section{
+    margin-bottom: 2rem;
+
+    @include from(l){
+        margin-bottom: 4rem;
+    }
+
+    &--diagonal{
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            z-index: var(--z-back);
+            width: 100%;
+            height: 100%;
+            background-color: #eaeaea;
+            transform: skewY(-2deg) scaleY(1.1);
+        }
+    }
+}
+
+@for $i from 1 to 21 {
+    .s-#{ $i * 5} {
+        width: #{$i * 5%};
+    }
+}
+
+@include from(l){
+    @for $i from 1 to 21 {
+        .l-#{ $i * 5} {
+            width: #{$i * 5%};
+        }
+    }
+}
+
+.center-block{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center-content{
+    text-align: center;
+}

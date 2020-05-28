@@ -1,0 +1,58 @@
+.main-menu{
+    list-style: none;
+
+    &__item{
+        padding: 1rem;
+    }
+
+    &__link{
+        color: $border-color;
+        margin-left: 1rem;
+        @include from(l){
+            color: $text-color;
+        }
+    }
+
+    @include from(l){
+        display: flex;
+    }
+}
+
+.nav{
+    position: fixed;
+    top: $header-height;
+    right: -80vw;
+    z-index: var(--z-modal);
+    height: calc(100vh - #{$header-height});
+    width: 80vw;
+    background: $dark-color;
+    transition: right .2s;
+    padding-top: 1rem;
+
+    &.show{
+        right: 0;
+    }
+
+    @include from(l){
+        position: static;
+        background-color: transparent;
+        padding-top: 0;
+        height: auto;
+        width: auto;
+    }
+}
+
+.main-menu-toggle{
+    $color: $dark-color;
+    width: 2.4rem;
+    height: 2rem;
+    background: linear-gradient($color 20%,
+                    transparent 20%, transparent 40%,
+                    $color 40%, $color 60%,
+                    transparent 60%, transparent 80%,
+                    $color 80%, $color 100%);
+    cursor: pointer;
+    @include from(l){
+        display: none;
+    }
+}
